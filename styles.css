@@ -157,7 +157,9 @@ body.dark-mode .image-profile {
     border-color: #74b9ff;
 }
 
-.Skills, .Lenguajes, .Idiomas {
+.Skills,
+.Lenguajes,
+.Idiomas {
     margin-top: 35px;
     padding-top: 25px;
     border-top: 2px solid #ecf0f1;

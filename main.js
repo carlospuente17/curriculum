@@ -1,18 +1,12 @@
-// Botón de modo oscuro/claro
 const toggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
-
-// Cargar tema guardado
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
     body.classList.add('dark-mode');
     toggleBtn.textContent = '☀️';
 }
-
-// Cambiar tema
 toggleBtn.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
-    
     if (body.classList.contains('dark-mode')) {
         toggleBtn.textContent = '☀️';
         localStorage.setItem('theme', 'dark');
@@ -24,7 +18,7 @@ toggleBtn.addEventListener('click', () => {
 
 // Smooth scroll para el footer
 document.querySelectorAll('footer a').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
         // Solo para enlaces internos con #
         if (this.getAttribute('href').startsWith('#')) {
             e.preventDefault();
@@ -52,12 +46,12 @@ backToTop.addEventListener('click', () => {
 // Efecto hover en las secciones
 const secciones = document.querySelectorAll('.fondo');
 secciones.forEach(seccion => {
-    seccion.addEventListener('mouseenter', function() {
+    seccion.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-5px)';
         this.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.15)';
     });
-    
-    seccion.addEventListener('mouseleave', function() {
+
+    seccion.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0)';
         this.style.boxShadow = '0 3px 12px rgba(0, 0, 0, 0.08)';
     });
@@ -65,12 +59,12 @@ secciones.forEach(seccion => {
 
 // Efecto hover en el perfil
 const profile = document.querySelector('.profile');
-profile.addEventListener('mouseenter', function() {
+profile.addEventListener('mouseenter', function () {
     this.style.transform = 'translateY(-5px)';
     this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.2)';
 });
 
-profile.addEventListener('mouseleave', function() {
+profile.addEventListener('mouseleave', function () {
     this.style.transform = 'translateY(0)';
     this.style.boxShadow = '0 3px 18px rgba(0, 0, 0, 0.12)';
 });
